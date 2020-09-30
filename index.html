@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+    html,
+    body,
+    div,
+    span,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    abbr,
+    address,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    samp,
+    small,
+    strong,
+    sub,
+    sup,
+    var,
+    b,
+    i,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: transparent;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        /* プロジェクトによって変動 */
+        color: #000;
+        line-height: 1.6;
+        font-weight: 400;
+        font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+
+        width: 100%;
+        font-smoothing: antialiased;
+        font-variant-numeric: tabular-nums;
+        /* safari hover対策 */
+        -webkit-font-smoothing: antialiased;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    a {
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* change colours to suit your needs */
+    ins {
+        background-color: #ff9;
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* change colours to suit your needs */
+    mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    del {
+        text-decoration: line-through;
+    }
+
+    abbr[title],
+    dfn[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* change border colour to suit your needs */
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #cccccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    input,
+    select {
+        vertical-align: middle;
+    }
+
+    img {
+        vertical-align: bottom;
+        line-height: 1.0;
+    }
+
+    button {
+        line-height: 1.0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+    }
+    #access {
+        color: white;
+        font-size: 3em;
+        text-align: center;
+    }
+</style>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        position: relative;
+        min-height: 4em;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        position: absolute;
+        /* background-color: white; */
+        /* width: 20em; */
+        font-size: 3em;
+        padding: 1em;
+    }
+
+    #hello p {
+        width: 100%;
+        background-image: url(images/fuki1.svg);
+        background-size: 100% 100%;
+        left: calc(75% - 8em);
+        width: 10em;
+        padding-top: 2em;
+        text-align: center;
+        top: calc(75% - 3em);
+    }
+
+    #lonely p {
+        width: 100%;
+        background-image: url(images/fuki2.svg);
+        background-size: 100% 100%;
+        left: calc(42% - 8em);
+        width: 7em;
+        text-align: center;
+        top: calc(25% - 3em);
+        transform: rotate(-27deg);
+        padding: 2em;
+    }
+
+    #location p {
+        background-image: url(images/fuki3.svg);
+        background-size: 100% 100%;
+        left: calc(79% - 8em);
+        width: 7em;
+        text-align: center;
+        top: calc(39% - 3em);
+        transform: rotate(6deg);
+        padding: 2em;
+    }
+
+    #location {
+        padding-bottom: 50%;
+    }
+
+    #location iframe {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        left: 0;
+        bottom: 0;
+    }
+
+    #schedule p {
+        background-image: url(images/fuki4.svg);
+        background-size: 100% 100%;
+        left: calc(79% - 11em);
+        width: 10em;
+        text-align: center;
+        top: calc(84% - 8em);
+        transform: rotate(-13deg);
+        padding: 3em 2em 2em;
+    }
+
+    header,
+    footer {
+        position: relative;
+        background-color: black;
+    }
+
+    header p {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        top: calc(78% - 2.5em);
+        position: absolute;
+        color: rgb(255, 211, 68);
+        font-size: 5em;
+        font-weight: bolder;
+    }
+
+    footer p {
+        width: 100%;
+        height: 10em;
+        line-height: 10em;
+        color: white;
+        padding: 0;
+        text-align: center;
+        font-size: 5em;
+    }
+
+    /* .black {
+        opacity: 0;
+    } */
+
+    .overlay {
+        transition: all 0.2s ease-in;
+        opacity: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: gray;
+        font-size: 6em;
+        background-color: black;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+        border-bottom: 1px solid dimgray;
+    }
+</style>
+
+<body>
+    <header>
+        <p>麻花小剧场</p>
+        <img src="images/theater.png">
+    </header>
+    <nav>
+
+    </nav>
+    <article>
+        <section id="hello" class="black">
+            <div class="overlay" onclick="this.style.opacity = 0">tap</div>
+            <p>我跟你说啊<br>爸爸妈妈要办婚礼</p>
+            <img src="images/我跟你说.jpg">
+        </section>
+        <section id="lonely" class="black">
+            <div class="overlay" onclick="this.style.opacity = 0">tap</div>
+            <p>但是不带我</p>
+            <img src="images/不带我去.JPG">
+        </section>
+        <section id="location" class="black">
+            <div class="overlay" onclick="this.style.opacity = 0">tap</div>
+            <p>要不你替我去吧</p>
+            <img src="images/你替我去吧.jpg">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.599273431548!2d139.72749861561493!3d35.63760423997007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b0131752fdb%3A0x1329e959bd91ac40!2sHappo-en!5e0!3m2!1szh-CN!2sjp!4v1599552720041!5m2!1szh-CN!2sjp"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        </section>
+        <section id="schedule" class="black">
+            <div class="overlay" onclick="this.style.opacity = 0">tap</div>
+            <p>下午4点半<br>下楼到1楼大厅等候哦(入口不是1楼！！)<br>别走错咯</p>
+            <img src="images/别走错了.jpg">
+        </section>
+    </article>
+    <footer>
+        <p>Fin</p>
+        <div id="access">品川站高輪口 15:30 16:00各有一班班车<br>车不等人 即停即走</div>
+    </footer>
+</body>
+<script>
+    setTimeout(() => {
+        document.getElementsByTagName("body").item(0).style.opacity = 1;
+    }, 100);
+</script>
+</html>
